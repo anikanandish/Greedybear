@@ -1,8 +1,8 @@
-# HoneyBear (GreedyBear Clone) 🐻
+# HoneyBear (GreedyBear Clone) 
 
 A lightweight Threat Intelligence Platform (TIP) designed to ingest, process, and serve malicious IP blocklists collected from distributed honeypot sensors. Inspired by the open-source GreedyBear project.
 
-## 🚀 Architecture Overview
+##  Architecture Overview
 
 *   **Sensor:** T-Pot / Cowrie honeypot sending JSON logs via Filebeat.
 *   **Message Broker:** Redis for queueing incoming raw attack events.
@@ -11,7 +11,7 @@ A lightweight Threat Intelligence Platform (TIP) designed to ingest, process, an
 
 ---
 
-## 🛠️ Getting Started (Local Development)
+## Getting Started (Local Development)
 
 ### Prerequisites
 *   Docker & Docker Compose
@@ -57,7 +57,7 @@ python app/worker.py
 
 ---
 
-## 📡 API Endpoints (Quick Reference)
+##  API Endpoints (Quick Reference)
 
 ### Ingest Logs (Internal)
 *   **POST** `/api/v1/ingest`
@@ -71,7 +71,7 @@ python app/worker.py
 
 ---
 
-## 🗺️ Initial Development Roadmap
+##  Initial Development Roadmap
 
 - [ ] **Phase 1:** Dockerize local environment (Postgres, FastAPI, Redis).
 - [ ] **Phase 2:** Write the ingestion pipeline worker to parse a standard Cowrie honeypot JSON format.
