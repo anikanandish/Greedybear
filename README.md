@@ -57,3 +57,24 @@ python app/worker.py
 
 ---
 
+## 📡 API Endpoints (Quick Reference)
+
+### Ingest Logs (Internal)
+*   **POST** `/api/v1/ingest`
+    *   *Payload:* Raw honeypot event schema.
+
+### Fetch Intelligence Feeds (Public/Authenticated)
+*   **GET** `/api/v1/feeds/ip/scanners`
+    *   *Returns:* A text list of IPs flagged as general internet scanners.
+*   **GET** `/api/v1/feeds/ip/attackers`
+    *   *Returns:* High-confidence malicious IPs actively brute-forcing or dropping payloads.
+
+---
+
+## 🗺️ Initial Development Roadmap
+
+- [ ] **Phase 1:** Dockerize local environment (Postgres, FastAPI, Redis).
+- [ ] **Phase 2:** Write the ingestion pipeline worker to parse a standard Cowrie honeypot JSON format.
+- [ ] **Phase 3:** Integrate GeoIP tracking to map IPs to countries and Autonomous System Numbers (ASNs).
+- [ ] **Phase 4:** Build the scoring engine script that moves an IP from "observed" to "attacker blocklist".
+
